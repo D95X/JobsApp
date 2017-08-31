@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+ <h2>Jobs</h2>
+  <ul class="list-group">
+    {% for i in job %}
+      <li class="list-group-item"><a href="job/{{i.id}}">{{i.title}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

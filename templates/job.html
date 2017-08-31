@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h3>{{job.title}}</h3>
+  <small>Posted by {{job.company}} on {{job.created}}</small>
+  <hr>
+  <div>
+    {{job.description | safe}}
+  </div>
+<a href="/apply/{{job.id}}" class="btn btn-primary pull-right">apply</a>
+{% endblock %}
